@@ -1,0 +1,29 @@
+.stats {
+  margin: 35px 0 30px 0;
+}
+
+.stats h1 {
+  margin: 0 0 20px 0;
+}
+
+.stats h4 {
+  margin: 0;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.stats h4 span{
+  color: #ffffffbe;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.stats p span{
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.stats p span{
+  font-weight: 500;
+  color: #ffffffbe;
+}

@@ -1,0 +1,53 @@
+.upgrade_box{
+ margin-bottom: 20px;
+}
+
+.upgradeButton{
+  width: 240px;
+  transition: 300ms ease;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.buttonDesc{
+  position: relative;
+  display: inline-block;
+}
+
+/* !important are custom */
+.css-quzlpb-MuiButtonBase-root-MuiButton-root {
+background-color: rgba(121, 121, 121, 0.5) !important;
+border-color: rgb(177 175 175) !important;
+}
+
+.MuiButtonBase-root:disabled {
+  background-color: rgb(43, 43, 43) !important;
+  color: rgba(227, 227, 227, 0.25) !important;
+}
+
+.pricetext{
+  font-size: 12px!important;
+}
+
+/* custom */
+@media (max-width: 543px) {
+  .upgradeButtonWidth{
+    width: 200px;
+    letter-spacing: 0 !important;
+  }
+}
+
+@media (max-width:482px) {
+  .upgradeButtonWidth{
+    width: 170px;
+  }
+}
+
+@media (max-width:400px) {
+  .upgradeButtonWidth{
+    width: 150px;
+  }
+  .pricetext{
+    font-size: 12px!important;
+  }
+}
