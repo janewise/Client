@@ -25,7 +25,7 @@ export function SaveGame(props: {
     localStorage.setItem("AC2Level", JSON.stringify(props.upgradeMap.current.get('autoClicker02')!.level))
     localStorage.setItem("AC3Level", JSON.stringify(props.upgradeMap.current.get('autoClicker03')!.level))
     localStorage.setItem("AC4Level", JSON.stringify(props.upgradeMap.current.get('autoClicker04')!.level))
-    console.log("Game saved");
+    // console.log("Game saved");
     // original setOpenSnackbar(true);
     setOpenSnackbar(false);
   }
@@ -35,7 +35,7 @@ export function SaveGame(props: {
     loadUpgrade('autoClicker02', parseInt(JSON.parse(localStorage.getItem("AC2Level") || '0')), props.upgradeMap)
     loadUpgrade('autoClicker03', parseInt(JSON.parse(localStorage.getItem("AC3Level") || '0')), props.upgradeMap)
     loadUpgrade('autoClicker04', parseInt(JSON.parse(localStorage.getItem("AC4Level") || '0')), props.upgradeMap)
-    console.log("Game loaded");
+    // console.log("Game loaded");
   }
 
   useEffect(() => { //loads latest save on app startup
@@ -49,7 +49,7 @@ export function SaveGame(props: {
   */
   const counter = useRef({ value: 0})
   counter.current.value+=1;
-  if (counter.current.value >= 1900) {//1400
+  if (counter.current.value >= 10) {//1400
     handleSave();
     counter.current.value=0;
   }
@@ -84,7 +84,7 @@ export function SaveGame(props: {
   return(
     <>
       <Button className='savehide' onClick={handleSave} style={{margin: "10px 10px 30px 10px"}} variant="contained">Save</Button> <br/>
-       <Button onClick={handleOpen} size="small" style={{margin: "10px"}} variant="contained" color="error">Wipe save</Button> 
+       <Button className='savehide' onClick={handleOpen} size="small" style={{margin: "10px"}} variant="contained" color="error">Wipe save</Button> 
       <Modal
         open={open}
         onClose={handleClose}
